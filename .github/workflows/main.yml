@@ -61,7 +61,7 @@ jobs:
 
       - name: Build project
         run: |
-            npm run build -- --prod
+            npm run build -- --production
 
       - name: Build image
         run: docker build . --file Dockerfile --tag $IMAGE_NAME
