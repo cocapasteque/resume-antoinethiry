@@ -66,12 +66,12 @@ jobs:
       - name: Build image
         run: docker build . --file Dockerfile --tag $IMAGE_NAME
 
-      - name: Log into registry
-        run: echo "${{ secrets.REGISTRY_USERNAME }}" | docker login docker.cocapasteque.tech -u ${{ secrets.REGISTRY_USERNAME }} -p ${{ secrets.REGISTRY_PASSWORD }}
+      # - name: Log into registry
+      #   run: echo "${{ secrets.REGISTRY_USERNAME }}" | docker login docker.cocapasteque.tech -u ${{ secrets.REGISTRY_USERNAME }} -p ${{ secrets.REGISTRY_PASSWORD }}
 
       - name: Push image
         run: |
-          IMAGE_ID=docker.cocapasteque.tech/$IMAGE_NAME
+          IMAGE_ID=cocapasteque/$IMAGE_NAME
           # Change all uppercase to lowercase
           IMAGE_ID=$(echo $IMAGE_ID | tr '[A-Z]' '[a-z]')
           # Strip git ref prefix from version
