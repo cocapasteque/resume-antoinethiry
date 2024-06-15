@@ -284,41 +284,52 @@
         class="text-sm text-stone-500"> - Munich (Germany)</span>
       </p>
       <p class="text-stone-500 text-xs">Jul 2018 - Dec 2022</p>
+      <div [@toggleHeight]="showSl ? 'expanded' : 'collapsed'" class="overflow-hidden">
+        <table class="table-auto w-full mt-3 border-spacing-y-4 border-separate">
+          <tbody>
+          <tr>
+            <td class="text-left align-top w-40 text-stone-300 font-medium">VR Speech Trainer</td>
+            <td>
+              Led the development of a VR Speech Trainer, overseeing both the Unity app and Angular web platform.
+              Features
+              included real-time speech recognition, posture analysis, and interactive audience feedback.
+            </td>
+          </tr>
+          <tr>
+            <td class="text-left align-top w-40 text-stone-300 font-medium">xR Trainer</td>
+            <td>
+              Contributed to the development of an XR Trainer, utilizing Unity to create lifelike avatars and practical
+              dialogues for soft skills training in a VR environment.
+            </td>
+          </tr>
+          <tr>
+            <td class="text-left align-top w-40 text-stone-300 font-medium">Business Gaming</td>
+            <td>
+              Played a role as a web developer in the Business Gaming Angular app, utilizing Java, Redis, and SQL for
+              the server-side and Angular for the client-side. Also involved in developing a fully tailored CMS app for
+              content management needs.
+            </td>
+          </tr>
+          </tbody>
+        </table>
 
+        <p>During my position at straightlabs, I concurrently mentored at the xR Creators Lab annually. This involved
+          leading Unity workshops for individuals in the creative industry, facilitating rapid prototyping of VR apps
+          throughout a week-long program. Additionally, I collaborated on two significant artistic projects with
+          Luxembourg
+          artists Karolina and Pascal, namely "Fever" showcased at the VR Arles Festival and the Louvres in 2019, and
+          "Sublimation" exhibited at la Biennale di Venezia in the same year.</p>
 
-      <table class="table-auto w-full mt-3 border-spacing-y-4 border-separate">
-        <tbody>
-        <tr>
-          <td class="text-left align-top w-40 text-stone-300 font-medium">VR Speech Trainer</td>
-          <td>
-            Led the development of a VR Speech Trainer, overseeing both the Unity app and Angular web platform. Features
-            included real-time speech recognition, posture analysis, and interactive audience feedback.
-          </td>
-        </tr>
-        <tr>
-          <td class="text-left align-top w-40 text-stone-300 font-medium">xR Trainer</td>
-          <td>
-            Contributed to the development of an XR Trainer, utilizing Unity to create lifelike avatars and practical
-            dialogues for soft skills training in a VR environment.
-          </td>
-        </tr>
-        <tr>
-          <td class="text-left align-top w-40 text-stone-300 font-medium">Business Gaming</td>
-          <td>
-            Played a role as a web developer in the Business Gaming Angular app, utilizing Java, Redis, and SQL for
-            the server-side and Angular for the client-side. Also involved in developing a fully tailored CMS app for
-            content management needs.
-          </td>
-        </tr>
-        </tbody>
-      </table>
-
-      <p>During my position at straightlabs, I concurrently mentored at the xR Creators Lab annually. This involved
-        leading Unity workshops for individuals in the creative industry, facilitating rapid prototyping of VR apps
-        throughout a week-long program. Additionally, I collaborated on two significant artistic projects with
-        Luxembourg
-        artists Karolina and Pascal, namely "Fever" showcased at the VR Arles Festival and the Louvres in 2019, and
-        "Sublimation" exhibited at la Biennale di Venezia in the same year.</p>
+        <div class="mt-3 cursor-pointer text-slate-400 hover:text-slate-500" (click)="showSl = !showSl">Show less...
+        </div>
+      </div>
+      <div [@toggleHeight]="!showSl ? 'expanded' : 'collapsed'">
+        <p class="mt-3">At straightlabs, I led and contributed to various VR and web development projects, including VR
+          Speech
+          Trainer, XR Trainer, and Business Gaming Angular app. I also mentored at the xR Creators Lab and
+          collaborated on notable artistic projects showcased at international festivals.</p>
+        <p (click)="showSl = !showSl" class="mt-3 cursor-pointer text-slate-400 hover:text-slate-500">Learn more...</p>
+      </div>
     </div>
 
     <div>
@@ -328,12 +339,24 @@
       </p>
       <p class="text-stone-500 text-xs">Aug 2016 - Jun 2018</p>
 
-      <p class="py-2">At 303% Studio, I primarily developed the web app Casterstats, using ASP.NET. It was notably
-        utilized by
-        clients like the CIM (Centre d'information sur les médias) and RTBF Auvio for extracting and analyzing
-        geographic-based audience data from online broadcast logs. Alongside this, I mentored students at the Microsoft
-        Innovation Center, offering Unity workshops and aiding with project management, coding, and internship
-        supervision during final year juries.</p>
+      <div [@toggleHeight]="!show303 ? 'expanded' : 'collapsed'">
+        <p class="mt-3">At 303% Studio, I developed the ASP.NET web app Casterstats for clients such as CIM and RTBF Auvio. I also
+          mentored students at the Microsoft Innovation Center, leading Unity workshops and assisting with various
+          project tasks</p>
+        <p class="mt-3 cursor-pointer text-slate-400 hover:text-slate-500"
+           (click)="show303 = !show303">Learn more...</p>
+      </div>
+      <div [@toggleHeight]="show303 ? 'expanded' : 'collapsed'">
+        <p class="mt-3">At 303% Studio, I primarily developed the web app Casterstats, using ASP.NET. It was notably
+          utilized by
+          clients like the CIM (Centre d'information sur les médias) and RTBF Auvio for extracting and analyzing
+          geographic-based audience data from online broadcast logs. Alongside this, I mentored students at the
+          Microsoft
+          Innovation Center, offering Unity workshops and aiding with project management, coding, and internship
+          supervision during final year juries.</p>
+        <div class="mt-3 cursor-pointer text-slate-400 hover:text-slate-500" (click)="show303 = !show303">Show less...
+        </div>
+      </div>
     </div>
 
     <div>
@@ -342,10 +365,18 @@
         class="text-sm text-stone-500"> - Brussels (Belgium)</span>
       </p>
       <p class="text-stone-500 text-xs">Feb 2016 - May 2016</p>
-
-      <p class="py-2">Developed a web application in ASP.NET for Zebra Academy. This application facilitated clinical
-        trials by managing data entry, patient encoding, and reporting. Additionally, it streamlined the process by
-        exporting data to OpenClinica, an open-source software designed for managing clinical trials.</p>
+      <div [@toggleHeight]="!showMic ? 'expanded' : 'collapsed'">
+        <p class="mt-3">Developed an ASP.NET web application for Zebra Academy to manage clinical trials, data entry, patient encoding, and reporting, with integration for exporting data to OpenClinica.</p>
+        <p class="mt-3 cursor-pointer text-slate-400 hover:text-slate-500"
+           (click)="showMic = !showMic">Learn more...</p>
+      </div>
+      <div [@toggleHeight]="showMic ? 'expanded' : 'collapsed'">
+        <p class="mt-3">Developed a web application in ASP.NET for Zebra Academy. This application facilitated clinical
+          trials by managing data entry, patient encoding, and reporting. Additionally, it streamlined the process by
+          exporting data to OpenClinica, an open-source software designed for managing clinical trials.</p>
+        <div class="mt-3 cursor-pointer text-slate-400 hover:text-slate-500" (click)="showMic = !showMic">Show less...
+        </div>
+      </div>
     </div>
 
     <h1 class="text-stone-300 text-3xl pt-8">Education</h1>
