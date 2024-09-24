@@ -1,15 +1,19 @@
 .home-container {
   @apply h-screen overflow-hidden
   justify-center items-center
-  grid
-  grid-cols-1 gap-0 pt-20
-  lg:grid-cols-2 lg:gap-20 lg:pt-0;
+  flex flex-col lg:flex-row gap-0
+  lg:gap-20 lg:pt-0;
 
   .right {
-    @apply animate-[text-reveal-right_3s_ease-out_forwards] opacity-0;
-    i {
-      @apply text-gray-200 relative -left-96 z-0;
-      font-size: 60rem;
+    @apply animate-[text-reveal-down_2s_ease-out_forwards_1s] opacity-0
+    absolute lg:relative
+    xl:-left-72
+    lg:-left-52;
+    img {
+      @apply
+      max-w-none max-h-none
+      w-[75vw] h-[75vw]
+      lg:w-[40vw] lg:h-[40vw]
     }
   }
 
