@@ -6,24 +6,28 @@
   lg:grid-cols-2 lg:gap-20 lg:pt-0;
 
   .right {
-
+    @apply animate-[text-reveal-right_3s_ease-out_forwards] opacity-0;
+    i {
+      @apply text-gray-200 relative -left-96 z-0;
+      font-size: 60rem;
+    }
   }
 
   .left {
-    @apply p-6;
+    @apply p-6 z-10;
     h1 {
       @apply
       text-8xl font-bold
       text-center
       lg:text-right
-      animate-[text-reveal-up_1.5s_ease-in-out_forwards] opacity-0;
+      animate-[text-reveal-up_2s_ease-in-out_forwards] opacity-0;
     }
 
     .intro {
       @apply
       text-2xl
       text-center
-      lg:text-right
+      lg:text-right lg:ml-10
       animate-[text-reveal-down_2s_ease-in-out_forwards_.2s] opacity-0;
     }
 
