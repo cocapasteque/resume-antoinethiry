@@ -1,0 +1,43 @@
+.skills-container {
+  @apply pt-32 pl-10 pr-10;
+
+  h1.title {
+    @apply text-center text-5xl mb-8 font-bold animate-[text-reveal-up_1.5s_ease-in-out_forwards] opacity-0;
+  }
+
+  .skill-card-container {
+    @apply grid grid-cols-5 gap-10;
+  }
+
+  .skill-want-to-develop {
+    @apply grid grid-cols-2 gap-10 pt-24 justify-center items-center;
+
+    h1.develop-title {
+      @apply text-5xl;
+
+      :first-child {
+        @apply relative left-52;
+      }
+
+      :last-child {
+        @apply relative left-80 top-6;
+      }
+    }
+
+    .skill-develop-container {
+      @apply flex flex-col gap-5;
+
+      div {
+        @apply max-w-xl;
+
+        &:nth-child(2) {
+          @apply relative left-48;
+        }
+
+        &:nth-child(3) {
+          @apply relative left-96;
+        }
+      }
+    }
+  }
+}

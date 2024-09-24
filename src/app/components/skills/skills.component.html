@@ -1,0 +1,18 @@
+<div class="skills-container" id="skills">
+  <h1 class="title">My top 5 tech skills</h1>
+
+  <div class="skill-card-container">
+    <div *ngFor="let skill of cvData.skills.slice(0, 5)">
+      <app-skill-section [logo]="skill.logo" [name]="skill.name" [value]="skill.value"></app-skill-section>
+    </div>
+  </div>
+
+  <div class="skill-want-to-develop">
+    <h1 class="develop-title"><span>The skills I want to</span><br/><span>improve and master</span></h1>
+    <div class="skill-develop-container">
+      <div *ngFor="let skill of skillsToLearn">
+        <app-skill-section [logo]="skill.logo" [name]="skill.name" [value]="skill.value"></app-skill-section>
+      </div>
+    </div>
+  </div>
+</div>

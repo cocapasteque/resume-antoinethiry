@@ -1,0 +1,16 @@
+<div class="skill-card">
+  <div class="title">
+    <img [src]="logo" alt="Skill logo"/>
+    <h1>{{ name }}</h1>
+  </div>
+  <div class="rating">
+    <i [ngClass]="{'ri-star-fill' : (value >= 1), 'ri-star-line' : (value < 1)}"></i>
+    <i [ngClass]="{'ri-star-fill' : (value >= 2), 'ri-star-line' : (value < 2)}"></i>
+    <i [ngClass]="{'ri-star-fill' : (value >= 3), 'ri-star-line' : (value < 3)}"></i>
+    <i [ngClass]="{'ri-star-fill' : (value >= 4), 'ri-star-line' : (value < 4)}"></i>
+    <i [ngClass]="{'ri-star-fill' : (value >= 5), 'ri-star-line' : (value < 5)}"></i>
+  </div>
+</div>
+
+
+

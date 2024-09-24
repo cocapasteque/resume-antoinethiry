@@ -1,0 +1,20 @@
+nav {
+  @apply
+  bg-slate-50
+  z-50
+  fixed w-full
+  p-6
+  flex flex-row
+  text-center justify-center
+  gap-10
+  border-b-2 border-slate-100;
+
+  .nav-item {
+
+    a {
+      @apply
+      hover:underline underline-offset-4
+      hover:text-slate-300;
+    }
+  }
+}

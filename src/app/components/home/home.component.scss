@@ -1,0 +1,31 @@
+.home-container {
+  @apply h-screen overflow-hidden
+  justify-center items-center
+  grid
+  grid-cols-1 gap-0 pt-20
+  lg:grid-cols-2 lg:gap-20 lg:pt-0;
+
+  .right {
+
+  }
+
+  .left {
+    @apply p-6;
+    h1 {
+      @apply
+      text-8xl font-bold
+      text-center
+      lg:text-right
+      animate-[text-reveal-up_1.5s_ease-in-out_forwards] opacity-0;
+    }
+
+    .intro {
+      @apply
+      text-2xl
+      text-center
+      lg:text-right
+      animate-[text-reveal-down_2s_ease-in-out_forwards_.2s] opacity-0;
+    }
+
+  }
+}

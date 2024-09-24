@@ -1,0 +1,22 @@
+.skill-card {
+  @apply rounded-2xl border shadow-lg w-full flex flex-col
+  text-center items-center pt-10 pb-10;
+
+  .title {
+    @apply flex flex-row justify-center items-center gap-5;
+    h1 {
+      @apply text-2xl;
+    }
+
+    img {
+      @apply max-w-16 text-center;
+    }
+  }
+
+  .rating {
+    @apply mt-10;
+    i {
+      @apply text-3xl;
+    }
+  }
+}
